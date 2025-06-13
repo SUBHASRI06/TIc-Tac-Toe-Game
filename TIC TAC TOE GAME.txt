@@ -7,7 +7,7 @@ class Main {
         char[][] board = new char[3][3];
         for (int row = 0; row < board.length; row++) {
             for (int col = 0; col < board[row].length; col++) {
-                board[row][col] = ' '; // FIXED: Use single quotes for characters
+                board[row][col] = ' '; 
             }
         }
 
@@ -27,9 +27,9 @@ class Main {
                 continue;
             }
 
-            if (board[row][col] == ' ') { // FIXED: Use char comparison
+            if (board[row][col] == ' ') { 
                 board[row][col] = player;
-                gameOver = haveWon(board, player); // FIXED: Method call syntax
+                gameOver = haveWon(board, player); 
                 if (gameOver) {
                     printBoard(board);
                     System.out.println("Player " + player + " has won!");
@@ -45,7 +45,7 @@ class Main {
         sc.close();
     }
 
-    public static boolean haveWon(char[][] board, char player) { // FIXED: Method syntax
+    public static boolean haveWon(char[][] board, char player) { 
         // Check rows
         for (int row = 0; row < board.length; row++) {
             if (board[row][0] == player && board[row][1] == player && board[row][2] == player) {
@@ -72,7 +72,7 @@ class Main {
         return false;
     }
 
-    public static void printBoard(char[][] board) { // FIXED: Method syntax
+    public static void printBoard(char[][] board) {
         for (int row = 0; row < board.length; row++) {
             for (int col = 0; col < board[row].length; col++) {
                 System.out.print(board[row][col]);
